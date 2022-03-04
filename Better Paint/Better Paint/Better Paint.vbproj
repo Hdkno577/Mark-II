@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD09D482-0285-478E-90FD-8FA43411829B}</ProjectGuid>
+    <ProjectGuid>{88F3EC09-9AAA-4EA7-9423-375834372D35}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>NewPaint.My.MyApplication</StartupObject>
-    <RootNamespace>NewPaint</RootNamespace>
-    <AssemblyName>NewPaint</AssemblyName>
+    <StartupObject>Better_Paint.My.MyApplication</StartupObject>
+    <RootNamespace>Better_Paint</RootNamespace>
+    <AssemblyName>Better Paint</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>NewPaint.xml</DocumentationFile>
+    <DocumentationFile>Better Paint.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>NewPaint.xml</DocumentationFile>
+    <DocumentationFile>Better Paint.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
