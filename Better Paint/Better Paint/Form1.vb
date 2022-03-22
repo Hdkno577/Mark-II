@@ -12,9 +12,9 @@
 
     Private Sub pictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
         If m_Previous IsNot Nothing Then
-            Dim l As New MyRec(PictureBox1.Image, m_Previous, e.Location)
-            l.w = TrackBar2.Value
-            l.h = TrackBar3.Value
+            Dim l As New Circle(PictureBox1.Image, m_Previous, e.Location)
+            'l.w = TrackBar2.Value
+            'l.h = TrackBar3.Value
             l.Pen = New Pen(c, w)
             m_shapes.Add(l)
             PictureBox1.Invalidate()
@@ -82,6 +82,10 @@
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+
+    End Sub
+
+    Private Sub TrackBar3_Scroll(sender As Object, e As EventArgs) Handles TrackBar3.Scroll
 
     End Sub
 End Class
