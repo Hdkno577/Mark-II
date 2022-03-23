@@ -11,10 +11,11 @@
         m_image = i
         m_a = a
         m_b = b
+
     End Sub
     Public Sub Draw()
         Using g As Graphics = Graphics.FromImage(m_image)
-            g.DrawRectangle(Pen, m_a.X, m_a.Y, w, h)
+            g.DrawRectangle(Pen, m_a.X, m_a.Y, 25, 50)
         End Using
     End Sub
 End Class

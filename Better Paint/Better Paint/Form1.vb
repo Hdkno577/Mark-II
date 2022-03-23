@@ -2,7 +2,8 @@
     Private m_Previous As System.Nullable(Of Point) = Nothing
     Dim m_shapes As New Collection
     Dim c As Color
-    Dim w As Integer
+    Dim t As Integer
+    Dim type As String
 
 
     Private Sub pictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
@@ -12,11 +13,21 @@
 
     Private Sub pictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
         If m_Previous IsNot Nothing Then
-            Dim l As New Circle(PictureBox1.Image, m_Previous, e.Location)
-            'l.w = TrackBar2.Value
-            'l.h = TrackBar3.Value
-            l.Pen = New Pen(c, w)
-            m_shapes.Add(l)
+            Dim d As Object
+
+            If type = "Line" Then
+                d = New Line(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, t)
+            End If
+            If type = "Rectangle" Then
+                d = New MyRec(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, t)
+            End If
+            If type = "Circle" Then
+                d = New Circle(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, t)
+            End If
+            m_shapes.Add(d)
             PictureBox1.Invalidate()
             m_Previous = e.Location
         End If
@@ -58,7 +69,7 @@
     End Sub
 
     Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles TrackBar1.Scroll
-        w = TrackBar1.Value
+        t = TrackBar1.Value
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -69,11 +80,15 @@
         c = sender.backcolor
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        c = sender.backcolor
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        type = "Line"
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        type = "Rectangle"
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         c = sender.backcolor
     End Sub
 
@@ -81,11 +96,11 @@
         c = sender.backcolor
     End Sub
 
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        c = sender.backcolor
     End Sub
 
-    Private Sub TrackBar3_Scroll(sender As Object, e As EventArgs) Handles TrackBar3.Scroll
-
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        type = "Circle"
     End Sub
 End Class
