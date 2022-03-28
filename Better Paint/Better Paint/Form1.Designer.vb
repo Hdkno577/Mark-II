@@ -44,6 +44,7 @@ Partial Class Form1
         Me.Button15 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.Button17 = New System.Windows.Forms.Button()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -178,7 +179,7 @@ Partial Class Form1
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(824, 11)
+        Me.Button11.Location = New System.Drawing.Point(808, 74)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(105, 45)
         Me.Button11.TabIndex = 14
@@ -187,7 +188,7 @@ Partial Class Form1
         '
         'Button12
         '
-        Me.Button12.Location = New System.Drawing.Point(824, 62)
+        Me.Button12.Location = New System.Drawing.Point(808, 125)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(105, 45)
         Me.Button12.TabIndex = 15
@@ -196,7 +197,7 @@ Partial Class Form1
         '
         'Button13
         '
-        Me.Button13.Location = New System.Drawing.Point(824, 113)
+        Me.Button13.Location = New System.Drawing.Point(808, 176)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(105, 45)
         Me.Button13.TabIndex = 16
@@ -205,39 +206,42 @@ Partial Class Form1
         '
         'Button14
         '
-        Me.Button14.Location = New System.Drawing.Point(824, 164)
+        Me.Button14.Location = New System.Drawing.Point(808, 227)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(105, 45)
         Me.Button14.TabIndex = 17
-        Me.Button14.Text = "Button14"
+        Me.Button14.Text = "Pie"
         Me.Button14.UseVisualStyleBackColor = True
         '
         'Button15
         '
-        Me.Button15.Location = New System.Drawing.Point(824, 215)
+        Me.Button15.Location = New System.Drawing.Point(808, 278)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(105, 45)
         Me.Button15.TabIndex = 18
-        Me.Button15.Text = "Button15"
+        Me.Button15.Text = "Arc"
         Me.Button15.UseVisualStyleBackColor = True
         '
         'Button16
         '
-        Me.Button16.Location = New System.Drawing.Point(824, 266)
+        Me.Button16.Location = New System.Drawing.Point(808, 329)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(105, 45)
         Me.Button16.TabIndex = 19
-        Me.Button16.Text = "Button16"
+        Me.Button16.Text = "Triangle"
         Me.Button16.UseVisualStyleBackColor = True
         '
         'Button17
         '
-        Me.Button17.Location = New System.Drawing.Point(824, 317)
+        Me.Button17.Location = New System.Drawing.Point(808, 380)
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(105, 45)
         Me.Button17.TabIndex = 20
-        Me.Button17.Text = "Button17"
+        Me.Button17.Text = "Pentagon"
         Me.Button17.UseVisualStyleBackColor = True
+        '
+        'SaveFileDialog1
+        '
         '
         'Form1
         '
@@ -299,4 +303,5 @@ Partial Class Form1
     Friend WithEvents Button15 As Button
     Friend WithEvents Button16 As Button
     Friend WithEvents Button17 As Button
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class

@@ -97,7 +97,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="MyArc.vb" />
+    <Compile Include="MyPoly.vb" />
     <Compile Include="MyRec.vb" />
+    <Compile Include="MyPie.vb" />
+    <Compile Include="pentagon.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
