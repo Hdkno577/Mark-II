@@ -44,6 +44,12 @@
                 d.h = h
                 d.w = w
             End If
+            If type = "Pentagon" Then
+                d = New Pentagon(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, t)
+
+
+            End If
             m_shapes.Add(d)
             PictureBox1.Invalidate()
             m_Previous = e.Location
@@ -148,5 +154,9 @@
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
         type = "Polygon"
+    End Sub
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        type = "Pentagon"
     End Sub
 End Class

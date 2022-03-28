@@ -101,7 +101,7 @@
     <Compile Include="MyPoly.vb" />
     <Compile Include="MyRec.vb" />
     <Compile Include="MyPie.vb" />
-    <Compile Include="pentagon.vb" />
+    <Compile Include="Pentagon.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
