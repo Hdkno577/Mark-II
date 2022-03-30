@@ -101,7 +101,9 @@
     <Compile Include="MyPoly.vb" />
     <Compile Include="MyRec.vb" />
     <Compile Include="MyPie.vb" />
+    <Compile Include="N-Gon.vb" />
     <Compile Include="Pentagon.vb" />
+    <Compile Include="Picture.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -125,6 +127,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Link2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

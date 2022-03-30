@@ -6,6 +6,8 @@
     Dim type As String
     Dim h As Integer
     Dim w As Integer
+    Dim r As Integer
+    Dim s As Integer
     Private Sub pictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
         m_Previous = e.Location
         pictureBox1_MouseMove(sender, e)
@@ -47,8 +49,18 @@
             If type = "Pentagon" Then
                 d = New Pentagon(PictureBox1.Image, m_Previous, e.Location)
                 d.Pen = New Pen(c, t)
-
-
+            End If
+            If type = "N-Gon" Then
+                d = New N_Gon(PictureBox1.Image, m_Previous, e.Location)
+                d.Pen = New Pen(c, t)
+                d.r = r
+                d.s = s
+            End If
+            If type = "Picture" Then
+                d = New Picture(PictureBox1.Image, m_Previous, e.Location)
+                d.Picture = PictureBox2.Image
+                d.h = h
+                d.w = w
             End If
             m_shapes.Add(d)
             PictureBox1.Invalidate()
@@ -158,5 +170,32 @@
 
     Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
         type = "Pentagon"
+    End Sub
+
+    Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs)
+
+    End Sub
+    Private Sub SidesUpDown_ValueChanged(sender As Object, e As EventArgs) Handles SidesUpDown.ValueChanged
+        Integer.TryParse(SidesUpDown.Value, s)
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        type = "N-Gon"
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        type = "Picture"
+    End Sub
+
+    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
+        PictureBox2.Load(OpenFileDialog1.FileName)
+    End Sub
+
+    Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
+        OpenFileDialog1.ShowDialog()
+    End Sub
+
+    Private Sub TrackBar4_Scroll(sender As Object, e As EventArgs) Handles TrackBar4.Scroll
+        Integer.TryParse(TrackBar4.Value, r)
     End Sub
 End Class
