@@ -59,6 +59,9 @@ Partial Class Form1
         Me.TrackBar5 = New System.Windows.Forms.TrackBar()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.Button21 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -383,12 +386,43 @@ Partial Class Form1
         Me.Label6.TabIndex = 34
         Me.Label6.Text = "Line Animate"
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(782, 41)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(38, 17)
+        Me.CheckBox2.TabIndex = 35
+        Me.CheckBox2.Text = "Fill"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'Button20
+        '
+        Me.Button20.Location = New System.Drawing.Point(269, 12)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(75, 23)
+        Me.Button20.TabIndex = 36
+        Me.Button20.Text = "Fill Color 1"
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'Button21
+        '
+        Me.Button21.Location = New System.Drawing.Point(350, 12)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(75, 23)
+        Me.Button21.TabIndex = 37
+        Me.Button21.Text = "Fill Color 2"
+        Me.Button21.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(951, 495)
+        Me.Controls.Add(Me.Button21)
+        Me.Controls.Add(Me.Button20)
+        Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.TrackBar5)
@@ -475,4 +509,7 @@ Partial Class Form1
     Friend WithEvents TrackBar5 As TrackBar
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Button20 As Button
+    Friend WithEvents Button21 As Button
 End Class

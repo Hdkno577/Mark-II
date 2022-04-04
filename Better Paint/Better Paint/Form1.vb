@@ -23,7 +23,12 @@
             End If
             If type = "Rectangle" Then
                 d = New MyRec(PictureBox1.Image, m_Previous, e.Location)
+                d.fill = CheckBox2.Checked
                 d.Pen = New Pen(c, t)
+                d.color1 = Button20.BackColor
+                d.color2 = Button21.BackColor
+                d.h = h
+                d.w = w
             End If
             If type = "Circle" Then
                 d = New Circle(PictureBox1.Image, m_Previous, e.Location)
@@ -203,5 +208,17 @@
 
     Private Sub TrackBar4_Scroll(sender As Object, e As EventArgs) Handles TrackBar4.Scroll
         Integer.TryParse(TrackBar4.Value, r)
+    End Sub
+
+    Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
+        ColorDialog1.ShowDialog()
+        c = ColorDialog1.Color
+        Button20.BackColor = c
+    End Sub
+
+    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+        ColorDialog1.ShowDialog()
+        c = ColorDialog1.Color
+        Button21.BackColor = c
     End Sub
 End Class
